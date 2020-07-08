@@ -3,9 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'models/saldo.dart';
+import 'models/transferencias.dart';
 
-void main() => runApp(ChangeNotifierProvider(
-    create: (context) => Saldo(0),
+void main() => runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(
+        create: (context) => Saldo(0),
+      ),
+      ChangeNotifierProvider(
+        create: (context) => Transferencias(),
+      )
+    ],
     child: BytebankApp(),
   ),
 );
