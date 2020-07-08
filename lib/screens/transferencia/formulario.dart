@@ -50,7 +50,8 @@ class FormularioTransferenciaState extends State<FormularioTransferencia> {
               ),
             ],
           ),
-        ));
+        )
+    );
   }
 
   void _criaTransferencia(BuildContext context) {
