@@ -62,7 +62,7 @@ class FormularioTransferencia extends StatelessWidget {
   }
 
   _validaTransferencia(context, numeroConta, valor) {
-    return (numeroConta != null && valor != null && valor <= Provider.of<Saldo>(context, listen: false).va);
+    return (numeroConta != null && valor != null && valor <= Provider.of<Saldo>(context, listen: false).valor);
   }
 
   _atualizaEstado(context, novaTransferencia, valor) {
